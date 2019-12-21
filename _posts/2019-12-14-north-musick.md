@@ -9,8 +9,8 @@ tag: [english, originalEnglish]
 
 ## View the work
 
-* [Page by Page (not yet available)](north-musick/page)
-* [Full Text (<500 Kilobytes)](north-musick/full)
+* [Page by Page (not yet available)](/north-musick/page)
+* [Full Text (<500 Kilobytes)](/north-musick/full)
 
 Francis North, 1st Baron Guilford, (c. 1637-1685) wrote _A Philosophical Essay of Musick Directed to a Friend_ around 1676, when he was 39. It was a work of Natural Philosophy which corresponds to the subject of Physics of our time. It is certainly _not_ a work of Aesthetics (Philosophy of Art & Beauty) nor that of Music Theory. My inference for this categorization followed from this paragraph:
 

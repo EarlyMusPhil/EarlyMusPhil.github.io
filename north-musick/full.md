@@ -445,7 +445,7 @@ THere are _Schismes_ in _Musick_, because the Scale is naturally fitted to one K
 			Semitone betwixt sixth sharp above seven flat is
 		</div>
 		<div style="grid-area:12/2/13/3;">
-			 <strong>}</strong> 16<em> sc.</em><fr><n>216</n>/<d>13½</d></fr> p<sup>t</sup> of the string
+			 <strong>}</strong> 16<em> sc.</em><fr><n>216&nbsp;</n>/<d>13½</d></fr> p<sup>t</sup> of the string
 		</div>
 	</div>
 </div>

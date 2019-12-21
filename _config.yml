@@ -14,7 +14,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: Digitizations of Early Musical Philosophies
-github_username: EarlyMusPhil/site
+github_username: EarlyMusPhil/EarlyMusPhil.github.io
 
 plugins:
 
