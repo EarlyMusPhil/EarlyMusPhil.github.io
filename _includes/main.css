@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css?family=Libre+Caslon+Text&display=swap');
+
+:root {
+	--page-width: 770px;
+	--font-size: 130%;
+	--font-color: #222;
+	--background: #eee;
+}
+
+body {
+	box-sizing: border-box;
+	padding: 10px;
+	background: var(--background); 
+	color: var(--font-color);
+	font-family: 'Libre Caslon Text', serif;
+	font-size: var(--font-size);
+}
+
+header, footer, nav, article>section, main>section {
+	margin: 0 auto;
+	max-width: var(--page-width);
+	word-break: break-word;
+}
+
+a {
+	color: #02d;
+}
+
+a:before { content: "["; color: black; }
+a:after  { content: "]"; color: black; }
+
+hr { border-style: dashed; border-color: #777; }
+
+article>header {
+	font-size: 140%; font-weight: bold;
+}
+article>footer, body>footer {
+	font-style: italic; font-size: 90%;
+}
+
+audio { width: 100%; }

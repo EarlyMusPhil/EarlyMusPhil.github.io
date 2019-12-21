@@ -1,0 +1,199 @@
+<style>
+@font-face {
+	font-family: "IM Fell English";
+	src: url('/assets/IM_FELL_English_Roman.ttf') format('truetype');
+}
+@font-face {
+	font-family: "IM Fell English";
+	src: url('/assets/IM_FELL_English_Italic.ttf') format('truetype');
+	font-style: italic;
+}
+
+
+main {
+	font-family: "IM Fell English", serif;
+	font-variant: discretionary-ligatures;
+	font-feature-settings: "ss01";
+}
+
+.wide {
+	width: 96vw;
+	position: relative;
+	left: 50%;
+	right: 50%;
+	margin-left: -48vw;
+	margin-right: -48vw;
+	overflow-x: auto;
+}
+
+main>section {
+	margin: 0 auto;
+	max-width: 580px;
+}
+
+left {
+	text-align: left;
+}
+
+right {
+	display: block;
+	text-align: right;
+}
+
+center {
+	text-align: center;
+}
+
+spread {
+	letter-spacing: .7ch;
+	margin-right: -.7ch;
+}
+
+big {
+	font-size: 190%;
+}
+
+vbig {
+	font-size: 270%;
+}
+
+dcap3+p:first-letter {
+	float: left;
+	font-size: 6.4rem;
+	line-height: 5.7rem;
+	margin-bottom: -1rem;
+	padding-right: .5rem;
+	font-style: normal;
+}
+
+dcap2+p:first-letter {
+	float: left;
+	font-size: 4rem;
+	line-height: 4rem;
+	margin-bottom: -1rem;
+	padding-right: .5rem;
+	font-style: normal;
+}
+
+smallc {
+	font-variant: small-caps;
+}
+
+smallc>spread {
+	letter-spacing: .3ch;
+	margin-right: -.3ch;
+}
+
+/** This fraction CSS style is only meant to be used for this document only, 
+	as it assumes the numerator takes up less width than the denominator.
+
+	1.3rem comes from the font-size: 130% of the site's font-size.
+**/
+fr {
+	position: relative;
+	font-size: 0;
+}
+fr>n {
+	position: relative;
+	font-size: 1.3rem;
+	border-bottom: 1px solid black;
+	top: -.8rem;
+	text-align: center;
+	min-width: 1.2ch;
+	display: inline-block;
+}
+fr>d {
+	position: absolute;
+	font-size: 1.3rem;
+	left: 0;
+	width: 100%;
+	text-align: center;
+	bottom: -1.1rem;
+}
+
+
+/** For the number lines and its marks **/
+.marking {
+	width: 100%; height: 22px; 
+	border-top: 10px solid var(--background); 
+	border-bottom: 10px solid var(--background); 
+	background: var(--font-color); 
+	box-sizing: border-box; 
+	position: relative;
+}
+.marking>m {
+	position: absolute;
+	top: -12px;
+}
+.marking>m::before {
+	content: "|";
+	font-weight: bold;
+	text-shadow: 2px 0 0 var(--background), -2px 0 0 var(--background);
+}
+
+.mText  {
+	position: relative;
+}
+.mText>span {
+	position: absolute;
+}
+
+/** For the divisonGrid **/
+#schismes {
+	display: grid;
+	grid: repeat(12 , 3rem) / 5fr 5fr 4fr;
+	align-items: center;
+}
+
+#schismes *:not(fr):not(d):not(n) {
+	font-size: 85%;
+}
+#schismes>.lCol { position: relative; }
+#schismes>.lCol:after {
+	content: "}";
+	font-weight: bold;
+	position: absolute;
+	right: .5rem;
+	top: calc(50% - .85rem); /** center - 85% from above**/
+}
+#schismes>.lBrac { position: relative; }
+#schismes>.lBrac:before {
+	content: "}";
+	position: absolute;
+	left: -1.1ch;
+    transform: scale(1.2,2.7);
+}
+
+/** semitone lines **/
+.rotateLabels>span:not(.except) {
+	transform: rotate(90deg) translate(-3px,1ch);
+}
+/** part of the String takes up **/
+.rotateBracket>span {
+	transform: rotate(90deg) translate(-3px,1ch);
+	text-align: center;
+}
+.rotateBracket>span:before {
+	content: "";
+    display: block;
+    position: absolute;
+    border: 3px solid var(--font-color);
+    border-top: 8px solid transparent;
+    border-bottom-width: 2px;
+    border-radius: 2px;
+    width: 100%;
+    left: -35px;
+    transform: rotate(-90deg);
+}
+.rotateBracket>span:after {
+	content: "";
+    position: absolute;
+    transform: rotate(-90deg);
+    border: 10px solid transparent;
+    border-left-width: 2px;
+    border-right-width: 2px;
+    border-top-color: var(--font-color);
+    left: calc(50% - 2ch);
+    top: 15%;
+}
+</style>
