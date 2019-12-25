@@ -87,7 +87,7 @@ A Tone is the repetition of Cracks or Pulses in equal spaces of time so quick th
 <center><big><em>Of the Relation of</em>&nbsp;&nbsp;<smallc><spread>Tones</spread></smallc>&nbsp;&nbsp;<em>and the Union of mixt</em>&nbsp;&nbsp;<smallc><spread>Sounds</spread></smallc>.</big></center> 
 
 <dcap2></dcap2>
-WHen the Pulses of tones are coincident one with the other, there is an Union of the _sounds_.
+WHen the Pulses of _tones_ are coincident one with the other, there is an Union of the _sounds_.
 <br>
 &emsp;For when any _Sound_ is made, solid bodies within the _sphaere_ of it are moved, and if the body moved stands upon a spring (as all instruments producing _tones_ do) it will vibrate by intervals according to the measure of the spring until the force be spent.
 <br>
@@ -391,7 +391,7 @@ THere are _Schismes_ in _Musick_, because the Scale is naturally fitted to one K
 			40 + <fr><n>320</n>/<d>5</d></fr> = 104 the fourth (false fifth
 		</div>
 		<div style="grid-area:6/2/7/3;">
-			Semitone is 14<em> sc.</em><fr><n>270</n>/<d>19²⁄₇</d></fr>th of the string
+			Semitone is 14<em> sc.</em><fr><n>&nbsp;270&nbsp;</n>/<d>19²⁄₇</d></fr>th of the string
 		</div>
 		<div class="lBrac" style="grid-area:6/3/8/4;">
 			tone is 30 <em>sc.</em> <fr><n>270</n>/<d>9</d></fr>th p<sup>t</sup>.
@@ -528,7 +528,7 @@ Which is better represented to the view by the following Scheme, being an Octave
 		<span style="left:81.80%">takes&nbsp;</span>
 		<span style="left:89.13%">up</span>
 	</div>
-	<div class="mText rotateBracket" style="margin-top: 3em; height: 3em;">
+	<div class="mText rotateBracket" style="margin-top: 3em; height: 3em; white-space: nowrap;">
 		<span style="left:4.8%;width: 11.11%;">9th</span>
 		<span style="left: 16.8%;width: 11.01%;">9th</span>
 		<span style="left: 28.8%;width: 6.31%;">10th</span>
