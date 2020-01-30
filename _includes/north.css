@@ -16,16 +16,6 @@ main {
 	font-feature-settings: "ss01";
 }
 
-.wide {
-	width: 96vw;
-	position: relative;
-	left: 50%;
-	right: 50%;
-	margin-left: -48vw;
-	margin-right: -48vw;
-	overflow-x: auto;
-}
-
 main>section {
 	margin: 0 auto;
 	max-width: 580px;

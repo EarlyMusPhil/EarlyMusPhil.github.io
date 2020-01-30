@@ -1,0 +1,71 @@
+<div id="pageViewer" class="wide">
+	<div>
+		<button id="prevPageBtn">Previous Page</button>
+		<button id="nextPageBtn">Next Page</button>
+	</div>
+	<div style="height: 95vh;">
+		<div id="leftSide" style="width: 50%; height: 100%; float: left; background: var(--font-color); cursor: grab; overflow: hidden;">
+			<img style="width: 100%; height: 100%; object-fit: contain;" src="">
+		</div>
+		<div style="width: 50%; height: 100%; float: left; overflow-y: auto;">
+			<div id="textPage" style="margin:0 20px;">
+				Loading page...
+			</div>
+		</div>
+	</div>
+	<script>
+		let currentPage = 1;
+
+		let imageScale = 1;
+		let imageTranslate = [0, 0];
+
+		let imageElement = document.querySelector("#leftSide img");
+		let textElement = document.getElementById("textPage");
+
+		function updateImage() {
+			imageElement.style.transform = `scale(${imageScale}) translate(${imageTranslate[0]}%,${imageTranslate[1]}%)`
+		}
+
+		function padNumber(num, numDigits) { // assumes num always have fewer digits than numDigits
+			return "0".repeat(numDigits-Math.log10(num+0.001)) + num;
+		}
+
+		function updateToCurrentImageAndPage() {
+			imageElement.src = `${ROOT}images/${padNumber(currentPage, 3)}.jpg`;
+			fetch(ROOT+"pages/"+padNumber(currentPage,3)).then(res => res.text()).then(res => {
+				let domElem = (new DOMParser()).parseFromString(res, 'text/html');
+				textElement.innerHTML = "";
+				// textElement.appendChild(domElem.body);
+				// This comment above seems more "secure", but the inner stylesheet doesn't carry over.
+				textElement.innerHTML = domElem.body.innerHTML;
+			});
+		}
+
+		prevPageBtn.onclick = () => {
+			currentPage = Math.max(1, currentPage - 1);
+			updateToCurrentImageAndPage();
+		}
+
+		nextPageBtn.onclick = () => {
+			currentPage = Math.min(MAX_PAGE, currentPage + 1);
+			updateToCurrentImageAndPage();
+		}
+
+		// IMAGE SCALE AND TRANSLATION
+		document.querySelector("#pageViewer #leftSide").addEventListener("wheel", e => {
+			e.preventDefault();
+			imageScale = Math.max(Math.min(imageScale + (-e.deltaY/400),4),1);
+			updateImage();
+		});
+		document.querySelector("#pageViewer #leftSide").addEventListener("mousemove", e => {
+			e.preventDefault();
+			if(e.buttons == 1) {
+				imageTranslate[0] = Math.max(Math.min(imageTranslate[0] + (e.movementX/10),50),-50);
+				imageTranslate[1] = Math.max(Math.min(imageTranslate[1] + (e.movementY/10),50),-50);
+				updateImage();
+			}
+		});
+		
+		updateToCurrentImageAndPage();
+	</script>
+</div>

@@ -38,4 +38,14 @@ article>footer, body>footer {
 	font-style: italic; font-size: 90%;
 }
 
+.wide {
+	width: 96vw;
+	position: relative;
+	left: 50%;
+	right: 50%;
+	margin-left: -48vw;
+	margin-right: -48vw;
+	overflow-x: auto;
+}
+
 audio { width: 100%; }
